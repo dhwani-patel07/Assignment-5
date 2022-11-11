@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FORM</title>
+    
+ <style>
+    
+
+        form {
+          background:rgb(213, 235, 215);
+          padding: 25px 300px 75px 200px;
+          color: #26642c;
+          margin: 10px 10px 10px 10px;
+          font-family:  "Times New Roman", Times, serif;
+          font-weight: bold;
+        }
+         h2 {
+          color:#26642c;
+          text-align: center;
+         } 
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+        }
+
+
+        input[type=date], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+        }
+
+        input[type=comment], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+        }
+
+        input[type=Password], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+        }
+
+        label {
+          padding: 12px 12px 12px 0;
+          display: inline-block;
+        }
+
+        input[type=submit] {
+          background-color: #0ca82e;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          
+        }
+
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+
+        .col-25 {
+          float: left;
+          width: 25%;
+          margin-top: 6px;
+        }
+
+        .col-75 {
+          float: left;
+          width: 75%;
+          margin-top: 6px;
+        }
+
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+
+ </style>     
+       
+
+
+</head>
+
+
+<body>
+    
+    <div class="container">
+    <form action="/action_page.php">
+        <h2>Student Registation Form</h2><br>
+        <div class="row">
+            <div class="col-25">        
+                <label for="fname"> FirstName :</label>
+                </div>
+                <div class="col-75">
+                <input type="text" name="fname" placeholder="Enter your first name" > <br><br>
+                </div>
+                </div>
+        <div class="row">
+            <div class="col-25">  
+                <label for="lname"> Last Name : </label>
+                </div>
+                <div class="col-75">
+                <input type="text" name="lname" placeholder="Enter your last name" > <br><br>
+                </div>
+                </div>
+        <div class="row">
+            <div class="col-25">          
+                <label for="Email"> Email : </label>
+                </div>
+                <div class="col-75">
+                <input type="text" name="email" placeholder="it should contain @" required> <br><br>
+                </div>
+                </div>
+  
+        <div class="row">
+            <div class="col-25"> 
+                <label for="Mobile"> Mobile : </label>
+                </div>
+                <div class="col-75">
+                <input type="text" name="mobile" maxlength="10" placeholder="only 10 digit are allowed"><br><br>
+                </div>
+                </div>
+
+        <div class="row">
+            <div class="col-25">        
+                <label for="Gender"> Gender : </label>
+                </div>
+                <div class="col-75">
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> FeMale <br><br>
+                </div>
+                </div>
+             
+        <div class="row">
+            <div class="col-25">          
+                <label for="dbirth"> Date of Birth : </label>
+                </div>
+                <div class="col-75">
+                <input type="date" name="bdate" > <br><br>
+                </div>
+                </div>
+               
+        <div class="row">
+            <div class="col-25"> 
+                <label for="Address"> Address: </label>
+                </div>
+                <div class="col-75">
+                <textarea name="comment" cols="60" rows="5"></textarea> <br><br>
+                </div>
+                </div>
+
+        <div class="row">
+            <div class="col-25"> 
+                <label for="city"> city : </label>
+                </div>
+                <div class="col-75">
+                <input type="text" name="city" required> <br><br>
+                </div>
+                </div>
+
+        <div class="row">
+            <div class="col-25"> 
+                <label for="pin"> Area PIN : </label>
+                </div>
+                <div class="col-75">
+                <input type="text" name="pin" required> <br><br>
+                </div>
+                </div>
+                
+        <div class="row">
+            <div class="col-25"> 
+                <label for="state"> State: </label>
+                </div>
+                <div class="col-75">
+                <input type="text" name="State" required> <br><br>
+                </div>
+                </div>
+
+        <div class="row">
+            <div class="col-25"> 
+                <label for="Qualification"> Qualification : </label>
+                </div>
+                 <div class="col-75">
+                <select name="Select Qualification">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Computer Architecture">Computer Architecture</option>
+                <option value="Tele Communication">Tele Communication</option>
+                <option value="Data Science">Data Science</option>
+                </select> <br><br>
+                </div>
+                </div>
+
+         <div class="row">
+             <div class="col-25"> 
+                <label for="Speciallization"> Speciallization:<br> </label>
+                </div>
+                <div class="col-75">
+                <input type="checkbox" name="Speciallization[]" value="Computer Science"> Computer Science <br><br>
+                <input type="checkbox" name="Speciallization[]" value="Information Technology;"> Information Tecnology <br><br>
+                <input type="checkbox" name="Speciallization[]" value="Computer Architecture"> Computer Architecture <br><br>
+                <input type="checkbox" name="Speciallization[]" value="Tele Communication"> Tele Communication <br><br>
+                </div>
+                </div>
+
+        <div class="row">
+            <div class="col-25"> 
+                <label for="password">  Password : </label>
+                </div>
+                <div class="col-75">
+                <input type="password" name="password" placeholder="Enter Password" required size="50"><br><br>
+                </div>
+                </div>
+        
+                <div class="col-75">
+                <input type="submit" value="Registered">
+                </div>
+                
+                            
+
+
+
+    </form>
+</div>
+</body>
+
+</html>  
